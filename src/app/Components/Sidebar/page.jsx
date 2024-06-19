@@ -36,7 +36,7 @@ const Sidebar = () => {
         <div className="flex h-full ">
             {/* Sidebar */}
             <div className="w-64 bg-gray-100 overflow-auto">
-                <div className="fixed top-14 left-0 h-full">
+                <div className="fixed top-16 left-0 h-full">
                     <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-4">
                         <div className="w-24 h-24 mb-4">
                             <Image

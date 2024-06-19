@@ -1,7 +1,8 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
-const Card3 = ({ name }) => {
+const Card5 = ({ name }) => {
     const [selectedItems, setSelectedItems] = useState([]);
 
     const handleCheckboxChange = (event, hotel) => {
@@ -16,50 +17,75 @@ const Card3 = ({ name }) => {
 
     const hotels = [
         {
-            name: "Taaj Club House",
-            location: "Illunois, United States",
-            image: "/1.jpeg", // Replace with actual image path
-            date: "12 may",
-            city: "Hawaii",
-            enquiry: 15,
+            img: "/link.png",
+            name: "Linked In",
+            desc: "Illunois, United States",
+            share: "15k",
+            like: "18k",
+            members: "263",
         },
         {
-            name: "Grand Hotel",
-            location: "Rio, Brazil",
-            image: "/2.jpeg", // Replace with actual image path
-            date: "07 aug",
-            city: "Hawaii",
-            enquiry: 5,
+            img: "/twi.png",
+            name: "Twitter",
+            desc: "Illunois, United States",
+            share: "15k",
+            like: "18k",
+            members: "263",
         },
         {
-            name: "Grand Pales",
-            location: "Chennai, India",
-            image: "/3.jpg", // Replace with actual image path
-            date: "18 jun",
-            city: "Hawaii",
-            enquiry: 35,
+            img: "/fb.png",
+            name: "Facebook",
+            desc: "Illunois, United States",
+            share: "15k",
+            like: "18k",
+            members: "263",
         },
         {
-            name: "Lake Palace Hotel",
-            location: "Beijing, China",
-            image: "/4.jpeg", // Replace with actual image path
-            date: "09 apr",
-            city: "Hawaii",
-            enquiry: 24,
+            img: "/goo.png",
+            name: "Google Plus",
+            desc: "Illunois, United States",
+            share: "15k",
+            like: "18k",
+            members: "263",
         },
         {
-            name: "First Class Hotel",
-            location: "Berlin, Germany",
-            image: "/5.jpg", // Replace with actual image path
-            date: "21 jun",
-            city: "Hawaii",
-            enquiry: 18,
+            img: "/you.png",
+            name: "Youtube",
+            desc: "Illunois, United States",
+            share: "15k",
+            like: "18k",
+            members: "263",
         },
+        {
+            img: "/wat.png",
+            name: "WhatsApp",
+            desc: "Illunois, United States",
+            share: "15k",
+            like: "18k",
+            members: "263",
+        },
+        {
+            img: "/web.png",
+            name: "VK",
+            desc: "Illunois, United States",
+            share: "15k",
+            like: "18k",
+            members: "263",
+        },
+        {
+            img: "/twi.png",
+            name: "Twitter",
+            desc: "Illunois, United States",
+            share: "15k",
+            like: "18k",
+            members: "263",
+        },
+
     ];
 
     return (
-        <div className="rounded-lg shadow-md bg-white p-4" style={{ width: '650px' }}>
-            <h2 className="text-xl font-bold mb-4">{name}</h2>
+        <div className="rounded-lg shadow-md bg-white p-16" style={{ width: '650px' }}>
+            <h2 className="text-xl font-bold mb-4">Socail Media</h2>
             <p className="text-gray-600 mb-6">
                 Airtport Hotels The Right Way To Start A Short Break Holiday
             </p>
@@ -69,22 +95,19 @@ const Card3 = ({ name }) => {
                     <thead>
                         <tr>
                             <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Select
-                            </th>
-                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Listing
+                                Media
                             </th>
                             <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Name
                             </th>
                             <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Date
+                                Share
                             </th>
                             <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                City
+                                Likes
                             </th>
                             <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Enquiry
+                                Members
                             </th>
                         </tr>
                     </thead>
@@ -92,40 +115,37 @@ const Card3 = ({ name }) => {
                         {hotels.map((hotel) => (
                             <tr key={hotel.name}>
                                 <td className="px-4 py-2 whitespace-nowrap">
-                                    <input
-                                        type="checkbox"
-                                        className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500"
-                                        onChange={(event) =>
-                                            handleCheckboxChange(event, hotel)
-                                        }
+                                    <Image
+                                        src={hotel.img}
+                                        alt={hotel.name}
+                                        className="rounded-full"
+                                        width={40}
+                                        height={40}
                                     />
                                 </td>
-                                <td className="px-4 py-2 whitespace-nowrap">
-                                    <img
-                                        src={hotel.image}
-                                        alt={hotel.name}
-                                        className="w-10 h-10 rounded-full"
-                                    />
+                                <td className="px-4 py-2 whitespace-nowrap flex flex-col">
+                                    <div className="font-bold">
+
+                                        {hotel.name}
+                                    </div>
+                                    <div className="text-sm">
+
+                                        {hotel.desc}
+                                    </div>
                                 </td>
                                 <td className="px-4 py-2 whitespace-nowrap">
                                     <div className="font-medium text-gray-900">
-                                        {hotel.name}
-                                    </div>
-                                    <div className="text-gray-500 text-sm">
-                                        {hotel.location}
+                                        {hotel.share}
                                     </div>
                                 </td>
                                 <td className="px-4 py-2 whitespace-nowrap">
-                                    <div className="text-gray-900">{hotel.date}</div>
-                                </td>
-                                <td className="px-4 py-2 whitespace-nowrap">
-                                    <div className="text-gray-900">{hotel.city}</div>
+                                    <div className="text-gray-900">{hotel.like}</div>
                                 </td>
                                 <td className="px-4 py-2 whitespace-nowrap">
                                     <span
                                         className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-green-100 text-green-800"
                                     >
-                                        {hotel.enquiry}
+                                        {hotel.members}
                                     </span>
                                 </td>
                             </tr>
@@ -137,4 +157,4 @@ const Card3 = ({ name }) => {
     );
 };
 
-export default Card3;
+export default Card5;

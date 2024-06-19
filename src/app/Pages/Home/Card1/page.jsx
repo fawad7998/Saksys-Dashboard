@@ -40,7 +40,7 @@ const Card1 = () => {
     ];
 
     return (
-        <div className="bg-white rounded-md shadow-md p-16">
+        <div className="bg-white rounded-md shadow-md p-16 ">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-bold">Country Campaigns</h2>
                 <div className="text-gray-500">

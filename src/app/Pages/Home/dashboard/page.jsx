@@ -27,47 +27,84 @@ function Dashboard() {
                     ← Back
                 </button>
             </div>
+            <div className='flex justify-evenly'>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div className="flex items-center justify-center bg-blue-500 rounded-lg p-4">
-                    <div className="flex items-center justify-center mb-2">
-                        <ChartBarIcon className='text-white h-[20px] ' />
+                <section className='flex'>
+                    <div className='h-[80px] w-[80px] flex items-center justify-center rounded bg-blue-400 '>
+                        <ChartBarIcon className='size-12 text-white ' />
                     </div>
-                    <h2 className="text-white text-2xl">{stats.todayViews}</h2>
-                    <p className="text-white">Today Views</p>
-                </div>
+                    <div className='w-[200px] bg-white flex flex-col items-center justify-center'>
+                        <div className='flex items-center justify-center'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 ">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                            </svg>
+                            Today views
 
-                <div className="bg-green-500 rounded-lg p-4">
-                    <div className="flex items-center justify-center mb-2">
-                        <CurrencyDollarIcon />
+                        </div>
+                        <div className='font-bold'>
+                            22520
+                        </div>
                     </div>
-                    <h2 className="text-white text-2xl">{stats.earnings}</h2>
-                    <p className="text-white">Earnings</p>
-                </div>
-
-                <div className="bg-yellow-500 rounded-lg p-4">
-                    <div className="flex items-center justify-center mb-2">
-                        <UserGroupIcon />
+                </section>
+                <section className='flex'>
+                    <div className='h-[80px] w-[80px] flex items-center justify-center rounded bg-green-500 '>
+                        <CurrencyDollarIcon className='size-12 text-white ' />
                     </div>
-                    <h2 className="text-white text-2xl">{stats.users}</h2>
-                    <p className="text-white">Users</p>
-                </div>
+                    <div className='w-[200px] bg-white flex flex-col items-center justify-center'>
+                        <div className='flex items-center justify-center'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 ">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                            </svg>
+                            Earnings
 
-                <div className="bg-red-500 rounded-lg p-4">
-                    <div className="flex items-center justify-center mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                        </div>
+                        <div className='font-bold'>
+                            22520
+                        </div>
+                    </div>
+                </section>
+                <section className='flex'>
+                    <div className='h-[80px] w-[80px] flex items-center justify-center rounded bg-blue-900 '>
+                        <UserGroupIcon className='size-12 text-white ' />
+                    </div>
+                    <div className='w-[200px] bg-white flex flex-col items-center justify-center'>
+                        <div className='flex items-center justify-center'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 ">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                            </svg>
+                            Users
+
+                        </div>
+                        <div className='font-bold'>
+                            22520
+                        </div>
+                    </div>
+                </section>
+                <section className='flex'>
+                    <div className='h-[80px] w-[80px] flex items-center justify-center rounded bg-red-500 '>
+                        {/* <ChartBarIcon className='size-12 text-white ' /> */}
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-9 text-white">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
                         </svg>
+
                     </div>
-                    <h2 className="text-white text-2xl">{stats.enquiry}</h2>
-                    <p className="text-white">Enquiry</p>
-                </div>
+                    <div className='w-[200px] bg-white flex flex-col items-center justify-center'>
+                        <div className='flex items-center justify-center'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 ">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                            </svg>
+                            Enquiry
+
+                        </div>
+                        <div className='font-bold'>
+                            22520
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     );
 }
 
 export default Dashboard;
-
-
 
